@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BHZ.Models
+namespace BHZ
 {
-    internal class Animal
+    public class Animal
     {
+        
     }
 }
