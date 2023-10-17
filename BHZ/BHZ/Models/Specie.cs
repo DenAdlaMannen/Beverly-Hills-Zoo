@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace BHZ.Models
 {
-    internal class Specie
+    public class Specie : Animal, IMakeSound
     {
+        public string SpecieName { get; set; }
+        public override void Move()
+        {
+            Console.WriteLine("");
+        }
     }
 }

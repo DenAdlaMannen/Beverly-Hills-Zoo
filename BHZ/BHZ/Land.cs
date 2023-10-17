@@ -3,15 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BHZ.Models;
 
-namespace BHZ.Models
+namespace BHZ
 {
-    public class Land : Animal, IMakeSound
+    public abstract class Land
     {
-
-        public override void Move()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract int Speed { get; set; }
     }
 }

@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\Land\" />
+    <Folder Include="Models\Water\" />
+  </ItemGroup>
+
 </Project>

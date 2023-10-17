@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BHZ.Models;
 
-namespace BHZ.Models
+namespace BHZ
 {
-    public class Air : Animal
+    public abstract class Air 
     {
-        public override void Move()
-        {
-            Console.WriteLine("I fly");
-        }
+        public abstract int MaxAltitude { get; set; }
     }
 }
