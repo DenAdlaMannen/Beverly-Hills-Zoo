@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BHZ.Migrations
 {
     [DbContext(typeof(BhzDbContext))]
-    [Migration("20231018121226_RenameColumns")]
-    partial class RenameColumns
+    [Migration("20231018131201_initialMigration")]
+    partial class initialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
