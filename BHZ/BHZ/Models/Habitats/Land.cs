@@ -1,6 +1,7 @@
 ﻿namespace BHZ.Models.Habitats
 {
-    public class Land : Animal
+    public abstract class Land : Animal
     {
+        public abstract int Speed { get; set; }
     }
 }

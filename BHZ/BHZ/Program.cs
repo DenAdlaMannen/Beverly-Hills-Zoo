@@ -1,3 +1,7 @@
+using BHZ.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer;
+
 namespace BHZ
 {
     public class Program
@@ -8,6 +12,7 @@ namespace BHZ
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<BhzDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Defaultconnection")));
 
             var app = builder.Build();
 

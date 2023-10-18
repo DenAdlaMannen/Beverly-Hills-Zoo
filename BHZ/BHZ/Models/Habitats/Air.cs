@@ -1,6 +1,7 @@
 ﻿namespace BHZ.Models.Habitats
 {
-    public class Air : Animal
+    public abstract class Air : Animal
     {
+        public abstract int MaxAltitude { get; set; }
     }
 }

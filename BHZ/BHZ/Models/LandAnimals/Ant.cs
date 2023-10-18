@@ -4,10 +4,11 @@ namespace BHZ.Models.LandAnimals
 {
     public class Ant : Land
     {
-        public string Name { get; set; } = "Ant";
-        public string Description { get; set; }
+        public string AnimalName { get; set; } = "Ant";
+        public string AnimalDescription { get; set; }
         public int WeightMin { get; set; }
         public int WeightMax { get; set; }
         public bool Extinct { get; set; }
+        public override int Speed { get; set; }
     }
 }

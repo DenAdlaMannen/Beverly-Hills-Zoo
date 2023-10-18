@@ -1,6 +1,7 @@
 ﻿namespace BHZ.Models.Habitats
 {
-    public class Water : Animal
+    public abstract class Water : Animal
     {
+        public abstract int MaxDepth { get; set; }
     }
 }
