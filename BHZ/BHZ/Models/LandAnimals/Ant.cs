@@ -1,6 +1,8 @@
-﻿namespace BHZ.Models.LandAnimals
+﻿using BHZ.Models.Habitats;
+
+namespace BHZ.Models.LandAnimals
 {
-    public class Ant
+    public class Ant : Land
     {
         public string Name { get; set; } = "Ant";
         public string Description { get; set; }

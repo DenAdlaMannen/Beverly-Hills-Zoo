@@ -1,6 +1,8 @@
-﻿namespace BHZ.Models.LandAnimals
+﻿using BHZ.Models.Habitats;
+
+namespace BHZ.Models.LandAnimals
 {
-    public class Hedgehog
+    public class Hedgehog : Land
     {
         public string Name { get; set; } = "Hedgehog";
         public string Description { get; set; }

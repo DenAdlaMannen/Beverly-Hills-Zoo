@@ -1,6 +1,6 @@
 ﻿namespace BHZ.Models.Habitats
 {
-    public class Water
+    public class Water : Animal
     {
     }
 }
