@@ -5,7 +5,7 @@
 namespace BHZ.Migrations
 {
     /// <inheritdoc />
-    public partial class dragonMig : Migration
+    public partial class RenameColumns : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

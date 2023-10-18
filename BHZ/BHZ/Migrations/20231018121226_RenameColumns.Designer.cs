@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BHZ.Migrations
 {
     [DbContext(typeof(BhzDbContext))]
-    [Migration("20231018092959_initalMigration")]
-    partial class initalMigration
+    [Migration("20231018121226_RenameColumns")]
+    partial class RenameColumns
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -60,8 +60,17 @@ namespace BHZ.Migrations
                 {
                     b.HasBaseType("BHZ.Models.Animal");
 
+                    b.Property<string>("AnimalDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AnimalName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("Extinct")
                         .HasColumnType("bit");
+
+                    b.Property<int>("MaxAltitude")
+                        .HasColumnType("int");
 
                     b.Property<int>("WeightMax")
                         .HasColumnType("int");
@@ -71,8 +80,17 @@ namespace BHZ.Migrations
 
                     b.ToTable("Animals", t =>
                         {
+                            t.Property("AnimalDescription")
+                                .HasColumnName("Dragon_AnimalDescription");
+
+                            t.Property("AnimalName")
+                                .HasColumnName("Dragon_AnimalName");
+
                             t.Property("Extinct")
                                 .HasColumnName("Dragon_Extinct");
+
+                            t.Property("MaxAltitude")
+                                .HasColumnName("Dragon_MaxAltitude");
 
                             t.Property("WeightMax")
                                 .HasColumnName("Dragon_WeightMax");
@@ -88,8 +106,17 @@ namespace BHZ.Migrations
                 {
                     b.HasBaseType("BHZ.Models.Animal");
 
+                    b.Property<string>("AnimalDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AnimalName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("Extinct")
                         .HasColumnType("bit");
+
+                    b.Property<int>("MaxAltitude")
+                        .HasColumnType("int");
 
                     b.Property<int>("WeightMax")
                         .HasColumnType("int");
@@ -104,8 +131,17 @@ namespace BHZ.Migrations
                 {
                     b.HasBaseType("BHZ.Models.Animal");
 
+                    b.Property<string>("AnimalDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AnimalName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("Extinct")
                         .HasColumnType("bit");
+
+                    b.Property<int>("Speed")
+                        .HasColumnType("int");
 
                     b.Property<int>("WeightMax")
                         .HasColumnType("int");
@@ -115,6 +151,12 @@ namespace BHZ.Migrations
 
                     b.ToTable("Animals", t =>
                         {
+                            t.Property("AnimalDescription")
+                                .HasColumnName("Ant_AnimalDescription");
+
+                            t.Property("AnimalName")
+                                .HasColumnName("Ant_AnimalName");
+
                             t.Property("Extinct")
                                 .HasColumnName("Ant_Extinct");
 
@@ -132,8 +174,17 @@ namespace BHZ.Migrations
                 {
                     b.HasBaseType("BHZ.Models.Animal");
 
+                    b.Property<string>("AnimalDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AnimalName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("Extinct")
                         .HasColumnType("bit");
+
+                    b.Property<int>("Speed")
+                        .HasColumnType("int");
 
                     b.Property<int>("WeightMax")
                         .HasColumnType("int");
@@ -143,8 +194,17 @@ namespace BHZ.Migrations
 
                     b.ToTable("Animals", t =>
                         {
+                            t.Property("AnimalDescription")
+                                .HasColumnName("Hedgehog_AnimalDescription");
+
+                            t.Property("AnimalName")
+                                .HasColumnName("Hedgehog_AnimalName");
+
                             t.Property("Extinct")
                                 .HasColumnName("Hedgehog_Extinct");
+
+                            t.Property("Speed")
+                                .HasColumnName("Hedgehog_Speed");
 
                             t.Property("WeightMax")
                                 .HasColumnName("Hedgehog_WeightMax");
@@ -160,8 +220,17 @@ namespace BHZ.Migrations
                 {
                     b.HasBaseType("BHZ.Models.Animal");
 
+                    b.Property<string>("AnimalDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AnimalName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("Extinct")
                         .HasColumnType("bit");
+
+                    b.Property<int>("Speed")
+                        .HasColumnType("int");
 
                     b.Property<int>("WeightMax")
                         .HasColumnType("int");
@@ -171,8 +240,17 @@ namespace BHZ.Migrations
 
                     b.ToTable("Animals", t =>
                         {
+                            t.Property("AnimalDescription")
+                                .HasColumnName("Snake_AnimalDescription");
+
+                            t.Property("AnimalName")
+                                .HasColumnName("Snake_AnimalName");
+
                             t.Property("Extinct")
                                 .HasColumnName("Snake_Extinct");
+
+                            t.Property("Speed")
+                                .HasColumnName("Snake_Speed");
 
                             t.Property("WeightMax")
                                 .HasColumnName("Snake_WeightMax");
@@ -188,8 +266,17 @@ namespace BHZ.Migrations
                 {
                     b.HasBaseType("BHZ.Models.Animal");
 
+                    b.Property<string>("AnimalDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AnimalName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("Extinct")
                         .HasColumnType("bit");
+
+                    b.Property<int>("MaxDepth")
+                        .HasColumnType("int");
 
                     b.Property<int>("WeightMax")
                         .HasColumnType("int");
@@ -199,6 +286,12 @@ namespace BHZ.Migrations
 
                     b.ToTable("Animals", t =>
                         {
+                            t.Property("AnimalDescription")
+                                .HasColumnName("Crab_AnimalDescription");
+
+                            t.Property("AnimalName")
+                                .HasColumnName("Crab_AnimalName");
+
                             t.Property("Extinct")
                                 .HasColumnName("Crab_Extinct");
 
@@ -216,8 +309,17 @@ namespace BHZ.Migrations
                 {
                     b.HasBaseType("BHZ.Models.Animal");
 
+                    b.Property<string>("AnimalDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AnimalName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("Extinct")
                         .HasColumnType("bit");
+
+                    b.Property<int>("MaxDepth")
+                        .HasColumnType("int");
 
                     b.Property<int>("WeightMax")
                         .HasColumnType("int");
@@ -227,8 +329,17 @@ namespace BHZ.Migrations
 
                     b.ToTable("Animals", t =>
                         {
+                            t.Property("AnimalDescription")
+                                .HasColumnName("Cucumber_AnimalDescription");
+
+                            t.Property("AnimalName")
+                                .HasColumnName("Cucumber_AnimalName");
+
                             t.Property("Extinct")
                                 .HasColumnName("Cucumber_Extinct");
+
+                            t.Property("MaxDepth")
+                                .HasColumnName("Cucumber_MaxDepth");
 
                             t.Property("WeightMax")
                                 .HasColumnName("Cucumber_WeightMax");
@@ -244,8 +355,17 @@ namespace BHZ.Migrations
                 {
                     b.HasBaseType("BHZ.Models.Animal");
 
+                    b.Property<string>("AnimalDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AnimalName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("Extinct")
                         .HasColumnType("bit");
+
+                    b.Property<int>("MaxDepth")
+                        .HasColumnType("int");
 
                     b.Property<int>("WeightMax")
                         .HasColumnType("int");
@@ -255,8 +375,17 @@ namespace BHZ.Migrations
 
                     b.ToTable("Animals", t =>
                         {
+                            t.Property("AnimalDescription")
+                                .HasColumnName("Plankton_AnimalDescription");
+
+                            t.Property("AnimalName")
+                                .HasColumnName("Plankton_AnimalName");
+
                             t.Property("Extinct")
                                 .HasColumnName("Plankton_Extinct");
+
+                            t.Property("MaxDepth")
+                                .HasColumnName("Plankton_MaxDepth");
 
                             t.Property("WeightMax")
                                 .HasColumnName("Plankton_WeightMax");

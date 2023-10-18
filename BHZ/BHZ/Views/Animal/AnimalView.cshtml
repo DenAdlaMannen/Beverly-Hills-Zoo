@@ -3,5 +3,14 @@
 *@
 
 <h1>Animal View</h1>
+
+<ul>
+    @foreach (var animal in Model)
+    {
+        <li>@animal.Name - @animal.Description</li>
+    }
+</ul>
+
 @{
+
 }

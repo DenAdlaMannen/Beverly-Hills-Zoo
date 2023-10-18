@@ -5,7 +5,7 @@
 namespace BHZ.Migrations
 {
     /// <inheritdoc />
-    public partial class testMig : Migration
+    public partial class initialDb2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

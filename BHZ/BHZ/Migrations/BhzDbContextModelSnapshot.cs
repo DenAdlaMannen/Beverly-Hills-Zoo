@@ -58,11 +58,9 @@ namespace BHZ.Migrations
                     b.HasBaseType("BHZ.Models.Animal");
 
                     b.Property<string>("AnimalDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnimalName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Extinct")
@@ -106,11 +104,9 @@ namespace BHZ.Migrations
                     b.HasBaseType("BHZ.Models.Animal");
 
                     b.Property<string>("AnimalDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnimalName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Extinct")
@@ -133,11 +129,9 @@ namespace BHZ.Migrations
                     b.HasBaseType("BHZ.Models.Animal");
 
                     b.Property<string>("AnimalDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnimalName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Extinct")
@@ -178,11 +172,9 @@ namespace BHZ.Migrations
                     b.HasBaseType("BHZ.Models.Animal");
 
                     b.Property<string>("AnimalDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnimalName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Extinct")
@@ -226,11 +218,9 @@ namespace BHZ.Migrations
                     b.HasBaseType("BHZ.Models.Animal");
 
                     b.Property<string>("AnimalDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnimalName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Extinct")
@@ -274,11 +264,9 @@ namespace BHZ.Migrations
                     b.HasBaseType("BHZ.Models.Animal");
 
                     b.Property<string>("AnimalDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnimalName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Extinct")
@@ -319,11 +307,9 @@ namespace BHZ.Migrations
                     b.HasBaseType("BHZ.Models.Animal");
 
                     b.Property<string>("AnimalDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnimalName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Extinct")
@@ -367,11 +353,9 @@ namespace BHZ.Migrations
                     b.HasBaseType("BHZ.Models.Animal");
 
                     b.Property<string>("AnimalDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnimalName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Extinct")

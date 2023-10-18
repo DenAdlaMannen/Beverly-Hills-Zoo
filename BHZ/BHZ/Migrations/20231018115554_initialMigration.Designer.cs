@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BHZ.Migrations
 {
     [DbContext(typeof(BhzDbContext))]
-    [Migration("20231018101823_dragonMig")]
-    partial class dragonMig
+    [Migration("20231018115554_initialMigration")]
+    partial class initialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -61,11 +61,9 @@ namespace BHZ.Migrations
                     b.HasBaseType("BHZ.Models.Animal");
 
                     b.Property<string>("AnimalDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnimalName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Extinct")
@@ -109,11 +107,9 @@ namespace BHZ.Migrations
                     b.HasBaseType("BHZ.Models.Animal");
 
                     b.Property<string>("AnimalDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnimalName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Extinct")
@@ -136,11 +132,9 @@ namespace BHZ.Migrations
                     b.HasBaseType("BHZ.Models.Animal");
 
                     b.Property<string>("AnimalDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnimalName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Extinct")
@@ -181,11 +175,9 @@ namespace BHZ.Migrations
                     b.HasBaseType("BHZ.Models.Animal");
 
                     b.Property<string>("AnimalDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnimalName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Extinct")
@@ -229,11 +221,9 @@ namespace BHZ.Migrations
                     b.HasBaseType("BHZ.Models.Animal");
 
                     b.Property<string>("AnimalDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnimalName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Extinct")
@@ -277,11 +267,9 @@ namespace BHZ.Migrations
                     b.HasBaseType("BHZ.Models.Animal");
 
                     b.Property<string>("AnimalDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnimalName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Extinct")
@@ -322,11 +310,9 @@ namespace BHZ.Migrations
                     b.HasBaseType("BHZ.Models.Animal");
 
                     b.Property<string>("AnimalDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnimalName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Extinct")
@@ -370,11 +356,9 @@ namespace BHZ.Migrations
                     b.HasBaseType("BHZ.Models.Animal");
 
                     b.Property<string>("AnimalDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnimalName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Extinct")
