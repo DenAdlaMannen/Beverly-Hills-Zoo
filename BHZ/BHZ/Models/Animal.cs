@@ -8,5 +8,9 @@ namespace BHZ.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public int age { get; set; }
+        public string? SpecieDescription { get; set; }
+        public int SpecieWeightMin { get; set; }
+        public int SpecieWeightMax { get; set; }
+        public bool Endangered { get; set; }
     }
 }

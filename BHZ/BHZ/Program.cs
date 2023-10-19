@@ -1,4 +1,5 @@
 using BHZ.Data;
+using BHZ.Models.AirAnimals;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
 

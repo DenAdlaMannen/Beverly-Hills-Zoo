@@ -5,7 +5,7 @@
 namespace BHZ.Migrations
 {
     /// <inheritdoc />
-    public partial class initialMigration : Migration
+    public partial class initialMig : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,15 +19,17 @@ namespace BHZ.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     age = table.Column<int>(type: "int", nullable: false),
-                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                   AnimalName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AnimalDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    WeightMin = table.Column<int>(type: "int", nullable: true),
-                    WeightMax = table.Column<int>(type: "int", nullable: true),
-                   Extinct = table.Column<bool>(type: "bit", nullable: true),
-                   MaxAltitude = table.Column<int>(type: "int", nullable: true),
+                    SpecieDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SpecieWeightMin = table.Column<int>(type: "int", nullable: false),
+                    SpecieWeightMax = table.Column<int>(type: "int", nullable: false),
+                    Endangered = table.Column<bool>(type: "bit", nullable: false),
+                    AirAnimalSpecie = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    HabitatType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LandAnimalSpecie = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    WaterAnimalSpecie = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MaxAltitude = table.Column<int>(type: "int", nullable: true),
                     Speed = table.Column<int>(type: "int", nullable: true),
-                   MaxDepth = table.Column<int>(type: "int", nullable: true)
+                    MaxDepth = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
