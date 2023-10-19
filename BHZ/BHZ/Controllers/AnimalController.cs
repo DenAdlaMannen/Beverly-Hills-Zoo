@@ -23,7 +23,7 @@ namespace BHZ.Controllers
             return View(animals);
         }
         [HttpPost]
-        public IActionResult AddAnimalAction(string specieSelect, string animalName, string animalStory, int animalAge)
+        public IActionResult AddAnimalAction(string specieName, string name, string description, int age)
         {
             // Skapa en ny instans av Animal med de inskickade värdena
 
@@ -33,15 +33,15 @@ namespace BHZ.Controllers
             //Add Land animal
 
             //Add Water animal
-            if (specieSelect == "Crab" || specieSelect == "Penguin" || specieSelect == "Cucumber")
+            if (specieName == "Crab" || specieName == "Penguin" || specieName == "Cucumber")
             {
 
                 Animal newAnimal = new Penguin
                 {
-                    SpecieName = specieSelect,
-                    Name = animalName,
-                    Description = animalStory,
-                    Age = animalAge,
+                    SpecieName = specieName,
+                    Name = name,
+                    Description = description,
+                    Age = age,
                 };
 
                 // Lägg till den nya instansen i din DbContext
