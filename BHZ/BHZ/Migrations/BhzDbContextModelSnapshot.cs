@@ -33,6 +33,7 @@ namespace BHZ.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("AirAnimalSpecie")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
@@ -66,14 +67,13 @@ namespace BHZ.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("WaterAnimalSpecie")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 
                     b.ToTable("Animals");
 
-                    b.HasDiscriminator<string>("WaterAnimalSpecie").HasValue("Animal");
+                    b.HasDiscriminator<string>("AirAnimalSpecie").HasValue("Animal");
 
                     b.UseTphMappingStrategy();
                 });
@@ -98,12 +98,15 @@ namespace BHZ.Migrations
                     b.HasDiscriminator().HasValue("Land");
                 });
 
-            modelBuilder.Entity("BHZ.Models.Habitats.Water", b =>
+            modelBuilder.Entity("BHZ.Models.Habitats.Sea", b =>
                 {
                     b.HasBaseType("BHZ.Models.Animal");
 
-                    b.Property<int>("MaxDepth")
+                    b.Property<int>("DivingDepth")
                         .HasColumnType("int");
+
+                    b.Property<string>("SeaAnimalSpecie")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasDiscriminator().HasValue("Water");
                 });
@@ -152,21 +155,21 @@ namespace BHZ.Migrations
 
             modelBuilder.Entity("BHZ.Models.WaterAnimals.Crab", b =>
                 {
-                    b.HasBaseType("BHZ.Models.Habitats.Water");
+                    b.HasBaseType("BHZ.Models.Habitats.Sea");
 
                     b.HasDiscriminator().HasValue("Crab");
                 });
 
             modelBuilder.Entity("BHZ.Models.WaterAnimals.Cucumber", b =>
                 {
-                    b.HasBaseType("BHZ.Models.Habitats.Water");
+                    b.HasBaseType("BHZ.Models.Habitats.Sea");
 
                     b.HasDiscriminator().HasValue("Cucumber");
                 });
 
             modelBuilder.Entity("BHZ.Models.WaterAnimals.Plankton", b =>
                 {
-                    b.HasBaseType("BHZ.Models.Habitats.Water");
+                    b.HasBaseType("BHZ.Models.Habitats.Sea");
 
                     b.HasDiscriminator().HasValue("Plankton");
                 });

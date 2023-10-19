@@ -2,8 +2,8 @@
 
 namespace BHZ.Models.WaterAnimals
 {
-    public class Crab : Water
+    public class Crab : Sea
     {
-        public override int MaxDepth { get; set; }
+        public override int DivingDepth { get; set; }
     }
 }

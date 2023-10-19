@@ -20,7 +20,7 @@ namespace BHZ.Data
                 .HasDiscriminator<string>("HabitatType")
                 .HasValue<Land>("Land")
                 .HasValue<Air>("Air")
-                .HasValue<Water>("Water");
+                .HasValue<Sea>("Water");
 
             modelBuilder.Entity<Land>()
                 .HasDiscriminator<string>("LandAnimalSpecie")
@@ -28,19 +28,22 @@ namespace BHZ.Data
                 .HasValue<Hedgehog>("Hedgehog")
                 .HasValue<Snake>("Snake");
 
+            modelBuilder.Entity<Sea>()
+             .HasDiscriminator<string>("WaterAnimalSpecie")
+             .HasValue<Crab>("Crab")
+             .HasValue<Cucumber>("Cucumber")
+             .HasValue<Plankton>("Plankton");
+
             modelBuilder.Entity<Air>()
                 .HasDiscriminator<string>("AirAnimalSpecie")
                 .HasValue<Dragon>("Dragon")
                 .HasValue<Gargoyle>("Gargoyle")
                 .HasValue<Penguin>("Penguin");
 
-            modelBuilder.Entity<Water>()
-                .HasDiscriminator<string>("WaterAnimalSpecie")
-                .HasValue<Crab>("Crab")
-                .HasValue<Cucumber>("Cucumber")
-                .HasValue<Plankton>("Plankton");
 
-            base.OnModelCreating(modelBuilder);
+
+
+            //base.OnModelCreating(modelBuilder);
         }
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -64,7 +67,8 @@ namespace BHZ.Data
         public DbSet<Plankton> Planktons { get; set; }
         public DbSet<Air> Air { get; set; }
         public DbSet<Land> Land { get; set; }
-        public DbSet<Water> Water { get; set; }
+        public DbSet<Sea> Sea { get; set; }
+        //public DbSet<Water> Water { get; set; }
 
 
     }
