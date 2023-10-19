@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BHZ.Migrations
 {
     [DbContext(typeof(BhzDbContext))]
-    [Migration("20231019080558_initialMig")]
-    partial class initialMig
+    [Migration("20231019085629_InitialMig")]
+    partial class InitialMig
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,6 +31,9 @@ namespace BHZ.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
 
                     b.Property<string>("AirAnimalSpecie")
                         .HasColumnType("nvarchar(max)");
@@ -55,6 +58,10 @@ namespace BHZ.Migrations
                     b.Property<string>("SpecieDescription")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("SpecieName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("SpecieWeightMax")
                         .HasColumnType("int");
 
@@ -64,9 +71,6 @@ namespace BHZ.Migrations
                     b.Property<string>("WaterAnimalSpecie")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("age")
-                        .HasColumnType("int");
 
                     b.HasKey("ID");
 

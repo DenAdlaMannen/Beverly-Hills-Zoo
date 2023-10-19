@@ -5,7 +5,7 @@
 namespace BHZ.Migrations
 {
     /// <inheritdoc />
-    public partial class initialMig : Migration
+    public partial class InitialMig : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,7 +18,8 @@ namespace BHZ.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    age = table.Column<int>(type: "int", nullable: false),
+                    Age = table.Column<int>(type: "int", nullable: false),
+                    SpecieName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SpecieDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SpecieWeightMin = table.Column<int>(type: "int", nullable: false),
                     SpecieWeightMax = table.Column<int>(type: "int", nullable: false),
