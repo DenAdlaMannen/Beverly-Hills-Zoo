@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    List<string> animalSpecies = new List<string> { "Penguin", "Gargoyle", "Dragon", "Ant", "Hedgehog", "Snake", "Crab", "Cucumber", "Plankton" };
+}
+
+<h1>Please add animal here</h1>
+
+<form asp-controller="Animal" asp-action="AddAnimalAction" method="post">
+    <div class="form-group">
+        <label for="specieSelect">Select Specie</label>
+        <select class="form-control" id="specieSelect">
+
+            @foreach (var animal in animalSpecies)
+            {
+                <option value="@animal">@animal</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="animalName">The animals name</label>
+        <input class="form-control" id="animalName" placeholder="Name">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">This animals story</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Example: Rescued from Fredriks basement.."></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="animalAge">Age</label>
+        <input class="form-control" id="animalAge" placeholder="Age">
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success" >Add animal</button>
+</form>
+
+

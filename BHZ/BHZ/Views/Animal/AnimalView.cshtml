@@ -4,12 +4,31 @@
 
 <h1>Animal View</h1>
 
-<ul>
-    @foreach (var animal in Model)
+<a asp-controller="Animal" asp-action="AddAnimal" type="button" class="btn btn-primary">Add Animal</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Animal</th>
+            <th scope="col">Animal Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var animal in Model)
     {
-        <li>@animal.Name</li>
+        <tr>
+            <th scope="row">@animal.SpecieName</th>
+            <td>@animal.Name</td>
+            <td>@animal.Age</td>
+            <td>@animal.Description</td>
+                <td><a asp-controller="Animal" asp-action="DeleteAnimal" type="button" class="btn btn-danger">Delete Animal</a></td>
+        </tr>
     }
-</ul>
+    </tbody>
+</table>
+
 
 @{
 

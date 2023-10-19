@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Emanu\source\repos\Beverly-Hills-Zoo\Beverly-Hills-Zoo\BHZ\BHZ
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Emanu/source/repos/Beverly-Hills-Zoo/Beverly-Hills-Zoo/BHZ/BHZ/Views/Animal/AddAnimal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWFsXEFkZEFuaW1hbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Emanu/source/repos/Beverly-Hills-Zoo/Beverly-Hills-Zoo/BHZ/BHZ/Views/Animal/AnimalView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWFsXEFuaW1hbFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
