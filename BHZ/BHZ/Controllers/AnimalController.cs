@@ -58,10 +58,21 @@ namespace BHZ.Controllers
             // Om du vill, kan du returnera något, till exempel en vy eller en redirect
             return RedirectToAction("AnimalView");
         }
-
-        public IActionResult DeleteAnimal()
+        [HttpPost]
+        public IActionResult DeleteAnimal(int animalID)
         {
-            return View();
-        }
+			// Find the animal in the database using the provided ID
+			var animal = _context.Animals.Find(animalID);
+
+			// If the animal exists, remove it
+			if (animal != null)
+			{
+				_context.Animals.Remove(animal);
+				_context.SaveChanges();
+			}
+
+			// Redirect back to the AnimalView
+			return RedirectToAction("AnimalView");
+		}
     }
 }
