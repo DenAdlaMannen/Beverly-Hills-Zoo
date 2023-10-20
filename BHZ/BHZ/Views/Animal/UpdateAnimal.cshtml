@@ -1,5 +1,47 @@
-﻿
-<h1>Edit animal</h1>
+﻿@{
+    List<string> animalSpecies = new List<string> { "Penguin", "Gargoyle", "Dragon", "Ant", "Hedgehog", "Snake", "Crab", "Cucumber", "Plankton" };
+}
+
+<h1>Update @Model.Name @Model.SpecieName</h1>
+
+<form asp-controller="Animal" asp-action="UpdateAnimalAction" method="post">
+    <div class="form-group">
+        <label for="animalName">Select Specie</label>
+        <select class="form-control" id="animalName" name="specieName" required>
+
+            @foreach (var animal in animalSpecies)
+            {
+                if(animal == Model.SpecieName)
+                {
+                    <option value="@animal" selected="selected">@animal</option>
+                }
+                else
+                {
+                    <option value="@animal">@animal</option>
+                }
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="animalName">The animals name</label>
+        <input class="form-control" id="animalName" value="@Model.Name" name="name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">This animals story</label>
+        <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3" required>@Model.Description</textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="animalAge">Age</label>
+        <input class="form-control" id="animalAge" value="@Model.Age" name="age" required>
+    </div>
+
+    <input type="hidden" value="@Model.ID" name="animalID"/>
+    <br />
+    <button type="submit" class="btn btn-success">Add animal</button>
+</form>
 
 @{
 }

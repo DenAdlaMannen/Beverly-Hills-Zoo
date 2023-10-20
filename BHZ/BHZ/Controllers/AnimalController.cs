@@ -263,9 +263,30 @@ namespace BHZ.Controllers
 
             return RedirectToAction("AnimalView");
         }
-        public IActionResult UpdateAnimal()
+        public IActionResult UpdateAnimal(int animalID)
         {
-            return View();
+            var animalToUpdate = _context.Animals.Find(animalID);
+            return View(animalToUpdate);
+        }
+        public IActionResult UpdateAnimalAction(string specieName, string name, string description, int age, int animalID)
+        {
+
+            var animalToUpdate = _context.Animals.Find(animalID);
+
+            if (animalToUpdate != null)
+            {
+                animalToUpdate.SpecieName = specieName;
+                animalToUpdate.Name = name;
+                animalToUpdate.Description = description;
+                animalToUpdate.Age = age;
+            }
+
+
+
+            _context.SaveChanges();
+
+
+            return RedirectToAction("AnimalView");
         }
     }
 }
