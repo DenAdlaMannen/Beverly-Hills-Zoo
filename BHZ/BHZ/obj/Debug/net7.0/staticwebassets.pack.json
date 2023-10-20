@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\BHZ.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\wwwroot\\Images\\giraffe.jpg",
+      "PackagePath": "staticwebassets\\Images\\giraffe.jpg"
+    },
+    {
       "Id": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

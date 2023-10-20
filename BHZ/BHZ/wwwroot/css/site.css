@@ -19,4 +19,13 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color:darkslategrey;
+}
+
+h1{
+    color: wheat;
+}
+
+p{
+    color: wheat;
 }

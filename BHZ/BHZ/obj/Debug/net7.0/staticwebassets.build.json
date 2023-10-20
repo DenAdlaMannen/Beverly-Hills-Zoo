@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bu3JsrYGk49HroBI+eC4V+YelecsClD/XGI7tsCf7A8=",
+  "Hash": "TQaGSRbpvTOkvNiGIJf5IdKbWOzwI+UEjSNi9LvxtFE=",
   "Source": "BHZ",
   "BasePath": "_content/BHZ",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\wwwroot\\Images\\giraffe.jpg",
+      "SourceId": "BHZ",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\wwwroot\\",
+      "BasePath": "_content/BHZ",
+      "RelativePath": "Images/giraffe.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\giraffe.jpg"
     },
     {
       "Identity": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\wwwroot\\js\\site.js",
