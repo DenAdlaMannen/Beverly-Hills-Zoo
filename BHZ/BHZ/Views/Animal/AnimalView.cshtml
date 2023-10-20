@@ -24,7 +24,12 @@
             <td>@animal.Age</td>
             <td>@animal.Description</td>
                 <td><a asp-controller="Animal" asp-action="UpdateAnimal" type="button" class="btn btn-success">Update Animal</a></td>
-                <td><a asp-controller="Animal" asp-action="DeleteAnimal" type="button" class="btn btn-danger">Delete Animal</a></td>
+                <td>
+                    <form asp-controller="Animal" asp-action="DeleteAnimal" method="post">
+                        <input type="hidden" name="animalID" value="@animal.ID" />
+                        <button type="submit" class="btn btn-danger">Delete Animal</button>
+                    </form>
+                </td>
         </tr>
     }
     </tbody>

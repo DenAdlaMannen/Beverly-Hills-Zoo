@@ -249,9 +249,19 @@ namespace BHZ.Controllers
             return RedirectToAction("AnimalView");
         }
 
-        public IActionResult DeleteAnimal()
+        [HttpPost]
+        public IActionResult DeleteAnimal(int animalID)
         {
-            return View();
+
+            var animal = _context.Animals.Find(animalID);
+
+            if (animal != null)
+            {
+                _context.Animals.Remove(animal);
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("AnimalView");
         }
         public IActionResult UpdateAnimal()
         {
