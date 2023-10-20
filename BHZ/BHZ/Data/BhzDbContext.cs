@@ -3,6 +3,7 @@ using BHZ.Models.AirAnimals;
 using BHZ.Models.Habitats;
 using BHZ.Models.LandAnimals;
 using BHZ.Models.WaterAnimals;
+using BHZ.Models.VisitVisitor;
 using Microsoft.EntityFrameworkCore;
 
 namespace BHZ.Data
@@ -40,9 +41,6 @@ namespace BHZ.Data
                 .HasValue<Gargoyle>("Gargoyle")
                 .HasValue<Penguin>("Penguin");
 
-
-
-
             //base.OnModelCreating(modelBuilder);
         }
 
@@ -68,6 +66,7 @@ namespace BHZ.Data
         public DbSet<Air> Air { get; set; }
         public DbSet<Land> Land { get; set; }
         public DbSet<Sea> Sea { get; set; }
+        public DbSet<Visitor> Visitors { get; set; }
         //public DbSet<Water> Water { get; set; }
 
 

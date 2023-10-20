@@ -2,6 +2,7 @@
 {
     public class Visit
     {
+
         public int Id { get; set; }
         public Visitor Visitor { get; set; }
         public string VisitTime { get; set; }

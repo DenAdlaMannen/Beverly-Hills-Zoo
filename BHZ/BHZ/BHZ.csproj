@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Views\Guide\" />
-    <Folder Include="Views\Visitor\" />
   </ItemGroup>
 
   <ItemGroup>

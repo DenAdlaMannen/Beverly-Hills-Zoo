@@ -1,4 +1,6 @@
-﻿namespace BHZ.Models.VisitVisitor
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace BHZ.Models.VisitVisitor
 {
     public class Visitor
     {
