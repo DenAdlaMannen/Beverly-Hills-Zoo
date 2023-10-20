@@ -17,7 +17,12 @@
                 <th scope="row">@visitor.ID</th>
                 <td>@visitor.Name</td>
                 <td>@visitor.Email</td>
-                <td><a asp-controller="Animal" asp-action="UpdateAnimal" type="button" class="btn btn-success">Booking</a></td>
+                <td>
+                    <form asp-controller="Visitor" asp-action="Booking" method="post">
+                        <input type="hidden" name="animalID" value="@visitor.ID" />
+                        <button type="submit" class="btn btn-warning">Book a visit!</button>
+                    </form>
+                </td>
                 <td><a asp-controller="Animal" asp-action="UpdateAnimal" type="button" class="btn btn-success">Update Visitor</a></td>
                 <td>
                     <form asp-controller="Animal" asp-action="DeleteAnimal" method="post">
