@@ -1,6 +1,8 @@
 ﻿using BHZ.Data;
 using BHZ.Models;
 using BHZ.Models.AirAnimals;
+using BHZ.Models.LandAnimals;
+using BHZ.Models.WaterAnimals;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BHZ.Controllers
@@ -25,41 +27,233 @@ namespace BHZ.Controllers
         [HttpPost]
         public IActionResult AddAnimalAction(string specieName, string name, string description, int age)
         {
-            // Skapa en ny instans av Animal med de inskickade värdena
 
-            //Add Air animal
+            // Since the Animal class is abstract and cant be instanciated we dont know i
 
 
-            //Add Land animal
-
-            //Add Water animal
-            if (specieName == "Crab" || specieName == "Penguin" || specieName == "Cucumber")
+            switch (specieName)
             {
+                case "Penguin": 
+                    {
+                        Animal newAnimal = new Penguin
+                        {
+                            SpecieName = specieName,
+                            Name = name,
+                            Description = description,
+                            Age = age,
+                        };
 
-                Animal newAnimal = new Penguin
-                {
-                    SpecieName = specieName,
-                    Name = name,
-                    Description = description,
-                    Age = age,
-                };
+                        // Lägg till den nya instansen i din DbContext
+                        _context.Animals.Add(newAnimal);
 
-                // Lägg till den nya instansen i din DbContext
-                _context.Animals.Add(newAnimal);
+                        // Spara ändringarna till databasen
+                        _context.SaveChanges();
+                        break;
+                    }
+                case "Gargoyle":
+                    {
+                        Animal newAnimal = new Gargoyle
+                        {
+                            SpecieName = specieName,
+                            Name = name,
+                            Description = description,
+                            Age = age,
+                        };
 
-                // Spara ändringarna till databasen
-                _context.SaveChanges();
+                        // Lägg till den nya instansen i din DbContext
+                        _context.Animals.Add(newAnimal);
+
+                        // Spara ändringarna till databasen
+                        _context.SaveChanges();
+                        break;
+                    }
+                case "Dragon":
+                    {
+                        Animal newAnimal = new Dragon
+                        {
+                            SpecieName = specieName,
+                            Name = name,
+                            Description = description,
+                            Age = age,
+                        };
+
+                        // Lägg till den nya instansen i din DbContext
+                        _context.Animals.Add(newAnimal);
+
+                        // Spara ändringarna till databasen
+                        _context.SaveChanges();
+                        break;
+                    }
+                case "Ant":
+                    {
+                        Animal newAnimal = new Ant
+                        {
+                            SpecieName = specieName,
+                            Name = name,
+                            Description = description,
+                            Age = age,
+                        };
+
+                        // Lägg till den nya instansen i din DbContext
+                        _context.Animals.Add(newAnimal);
+
+                        // Spara ändringarna till databasen
+                        _context.SaveChanges();
+                        break;
+                    }
+                case "Snake":
+                    {
+                        Animal newAnimal = new Snake
+                        {
+                            SpecieName = specieName,
+                            Name = name,
+                            Description = description,
+                            Age = age,
+                        };
+
+                        // Lägg till den nya instansen i din DbContext
+                        _context.Animals.Add(newAnimal);
+
+                        // Spara ändringarna till databasen
+                        _context.SaveChanges();
+                        break;
+                    }
+                case "Hedgehog":
+                    {
+                        Animal newAnimal = new Hedgehog
+                        {
+                            SpecieName = specieName,
+                            Name = name,
+                            Description = description,
+                            Age = age,
+                        };
+
+                        // Lägg till den nya instansen i din DbContext
+                        _context.Animals.Add(newAnimal);
+
+                        // Spara ändringarna till databasen
+                        _context.SaveChanges();
+                        break;
+                    }
+                case "Crab":
+                    {
+                        Animal newAnimal = new Crab
+                        {
+                            SpecieName = specieName,
+                            Name = name,
+                            Description = description,
+                            Age = age,
+                        };
+
+                        // Lägg till den nya instansen i din DbContext
+                        _context.Animals.Add(newAnimal);
+
+                        // Spara ändringarna till databasen
+                        _context.SaveChanges();
+                        break;
+                    }
+                case "Cucumber":
+                    {
+                        Animal newAnimal = new Cucumber
+                        {
+                            SpecieName = specieName,
+                            Name = name,
+                            Description = description,
+                            Age = age,
+                        };
+
+                        // Lägg till den nya instansen i din DbContext
+                        _context.Animals.Add(newAnimal);
+
+                        // Spara ändringarna till databasen
+                        _context.SaveChanges();
+                        break;
+                    }
+                case "Plankton":
+                    {
+                        Animal newAnimal = new Plankton
+                        {
+                            SpecieName = specieName,
+                            Name = name,
+                            Description = description,
+                            Age = age,
+                        };
+
+                        // Lägg till den nya instansen i din DbContext
+                        _context.Animals.Add(newAnimal);
+
+                        // Spara ändringarna till databasen
+                        _context.SaveChanges();
+                        break;
+                    }
+                default: { break; }
             }
 
+            ////Add Air animal
+            //if (specieName == "Penguin" || specieName == "Dragon" || specieName == "Gargoyle")
+            //{
 
+            //    Animal newAnimal = new Penguin
+            //    {
+            //        SpecieName = specieName,
+            //        Name = name,
+            //        Description = description,
+            //        Age = age,
+            //    };
 
+            //    // Lägg till den nya instansen i din DbContext
+            //    _context.Animals.Add(newAnimal);
 
+            //    // Spara ändringarna till databasen
+            //    _context.SaveChanges();
+            //}
 
-            // Om du vill, kan du returnera något, till exempel en vy eller en redirect
+            ////Add Land animal
+            //if (specieName == "Ant" || specieName == "Snake" || specieName == "Hedgehog")
+            //{
+
+            //    Animal newAnimal = new Snake
+            //    {
+            //        SpecieName = specieName,
+            //        Name = name,
+            //        Description = description,
+            //        Age = age,
+            //    };
+
+            //    // Lägg till den nya instansen i din DbContext
+            //    _context.Animals.Add(newAnimal);
+
+            //    // Spara ändringarna till databasen
+            //    _context.SaveChanges();
+            //}
+
+            ////Add Water animal
+            //if (specieName == "Crab" || specieName == "Penguin" || specieName == "Cucumber")
+            //{
+
+            //    Animal newAnimal = new Crab
+            //    {
+            //        SpecieName = specieName,
+            //        Name = name,
+            //        Description = description,
+            //        Age = age,
+            //    };
+
+            //    // Lägg till den nya instansen i din DbContext
+            //    _context.Animals.Add(newAnimal);
+
+            //    // Spara ändringarna till databasen
+            //    _context.SaveChanges();
+            //}
+
             return RedirectToAction("AnimalView");
         }
 
         public IActionResult DeleteAnimal()
+        {
+            return View();
+        }
+        public IActionResult UpdateAnimal()
         {
             return View();
         }

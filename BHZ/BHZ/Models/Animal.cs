@@ -13,5 +13,6 @@ namespace BHZ.Models
         public int SpecieWeightMin { get; set; }
         public int SpecieWeightMax { get; set; }
         public bool Endangered { get; set; }
+        public string? HabitatType { get; set; }
     }
 }
