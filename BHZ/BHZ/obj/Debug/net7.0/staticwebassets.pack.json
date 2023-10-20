@@ -5,8 +5,20 @@
       "PackagePath": "staticwebassets\\BHZ.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\wwwroot\\Images\\gifReklam.gif.gif",
+      "PackagePath": "staticwebassets\\Images\\gifReklam.gif.gif"
+    },
+    {
       "Id": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\wwwroot\\Images\\giraffe.jpg",
       "PackagePath": "staticwebassets\\Images\\giraffe.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\wwwroot\\Images\\reklam1.jpg",
+      "PackagePath": "staticwebassets\\Images\\reklam1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\wwwroot\\Images\\reklam2.jpg",
+      "PackagePath": "staticwebassets\\Images\\reklam2.jpg"
     },
     {
       "Id": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\wwwroot\\css\\site.css",

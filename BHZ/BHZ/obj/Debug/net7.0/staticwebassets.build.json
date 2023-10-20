@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TQaGSRbpvTOkvNiGIJf5IdKbWOzwI+UEjSNi9LvxtFE=",
+  "Hash": "d4ltjS9kGX3G7w6rdgoDxlvSTlX/z6sknCVqAk/IT04=",
   "Source": "BHZ",
   "BasePath": "_content/BHZ",
   "Mode": "Default",
@@ -85,6 +85,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\wwwroot\\Images\\gifReklam.gif.gif",
+      "SourceId": "BHZ",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\wwwroot\\",
+      "BasePath": "_content/BHZ",
+      "RelativePath": "Images/gifReklam.gif.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\gifReklam.gif.gif"
+    },
+    {
       "Identity": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\wwwroot\\Images\\giraffe.jpg",
       "SourceId": "BHZ",
       "SourceType": "Discovered",
@@ -100,6 +117,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\giraffe.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\wwwroot\\Images\\reklam1.jpg",
+      "SourceId": "BHZ",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\wwwroot\\",
+      "BasePath": "_content/BHZ",
+      "RelativePath": "Images/reklam1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\reklam1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\wwwroot\\Images\\reklam2.jpg",
+      "SourceId": "BHZ",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\wwwroot\\",
+      "BasePath": "_content/BHZ",
+      "RelativePath": "Images/reklam2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\reklam2.jpg"
     },
     {
       "Identity": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\wwwroot\\js\\site.js",
