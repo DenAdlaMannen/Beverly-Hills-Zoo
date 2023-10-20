@@ -31,6 +31,9 @@
                             <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "Animal" && ViewContext.RouteData.Values["Action"].ToString() == "AnimalView" ? "text-white" : "text-dark")"
                                asp-area="" asp-controller="Animal" asp-action="AnimalView">Animals Page</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "Visitor" && ViewContext.RouteData.Values["Action"].ToString() == "AnimalView" ? "text-white" : "text-dark")" asp-area="" asp-controller="Visitor" asp-action="VisitorView">Visitos Page</a>
+                        </li>
                     </ul>
 
                 </div>

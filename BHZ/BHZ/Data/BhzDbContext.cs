@@ -2,8 +2,10 @@
 using BHZ.Models.AirAnimals;
 using BHZ.Models.Habitats;
 using BHZ.Models.LandAnimals;
+using BHZ.Models.VisitVisitor;
 using BHZ.Models.WaterAnimals;
 using Microsoft.EntityFrameworkCore;
+
 
 namespace BHZ.Data
 {
@@ -56,6 +58,8 @@ namespace BHZ.Data
         //        .HasValue<Crab>("Crab");
         //}
 
+        public DbSet<Visitor> Visitors { get; set; }
+        public DbSet<Visit> Visits { get; set; }
         public DbSet<Animal> Animals { get; set; }
         public DbSet<Ant> Ants { get; set; }
         public DbSet<Hedgehog> Hedgehogs { get; set; }
