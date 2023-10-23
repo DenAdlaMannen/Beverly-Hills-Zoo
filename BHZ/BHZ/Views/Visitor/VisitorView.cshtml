@@ -19,14 +19,19 @@
                 <td>@visitor.Email</td>
                 <td>
                     <form asp-controller="Booking" asp-action="BookAVisit" method="post">
-                        <input type="hidden" name="animalID" value="@visitor.ID" />
+                        <input type="hidden" name="visitorID" value="@visitor.ID" />
                         <button type="submit" class="btn btn-warning">Book a visit!</button>
                     </form>
                 </td>
-                <td><a asp-controller="Animal" asp-action="UpdateAnimal" type="button" class="btn btn-success">Update Visitor</a></td>
                 <td>
-                    <form asp-controller="Animal" asp-action="DeleteAnimal" method="post">
-                        <input type="hidden" name="animalID" value="@visitor.ID" />
+                    <form asp-controller="Visitor" asp-action="UpdateVisitor" method="post">
+                        <input type="hidden" name="visitorID" value="@visitor.ID" />
+                        <button type="submit" class="btn btn-success">Update Visitor</button>
+                    </form>
+                </td>
+                <td>
+                    <form asp-controller="Visitor" asp-action="DeleteVisitor" method="post">
+                        <input type="hidden" name="visitorID" value="@visitor.ID" />
                         <button type="submit" class="btn btn-danger">Delete Visitor</button>
                     </form>
                 </td>

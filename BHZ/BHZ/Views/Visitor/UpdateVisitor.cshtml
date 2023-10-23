@@ -1,0 +1,30 @@
+﻿@{
+
+}
+
+
+
+<h1>Update @Model.Name</h1>
+
+
+
+<form asp-controller="Visitor" asp-action="UpdateVisitorAction" method="post">
+
+    <div class="form-group">
+        <label for="VisitorName">The animals name</label>
+        <input class="form-control" id="visitorName" value="@Model.Name" name="name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">This animals story</label>
+        <textarea name="Email" class="form-control" id="exampleFormControlTextarea1" required>@Model.Email</textarea>
+    </div>
+
+
+    <input type="hidden" value="@Model.ID" name="VisitorID"/>
+    <br />
+    <button type="submit" class="btn btn-success">Edit Visitor</button>
+</form>
+
+@{
+}
