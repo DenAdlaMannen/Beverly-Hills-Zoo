@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    List<string> animalSpecies = new List<string> { "Penguin", "Gargoyle", "Dragon", "Ant", "Hedgehog", "Snake", "Crab", "Cucumber", "Plankton" };
+}
+
+<h1>Please add animal here</h1>
+
+<form asp-controller="Visitor" asp-action="AddVisitorAction" method="post">
+
+    <div class="form-group">
+        <label for="visitorName">Name:</label>
+        <input class="form-control" id="visitorName" placeholder="Name" name="name">
+    </div>
+
+    <div class="form-group">
+        <label for="visitorEmail">Email:</label>
+        <input class="form-control" id="visitorEmail" placeholder="Email" name="email">
+    </div>
+
+    <button type="submit" class="btn btn-success" >Add Visitor</button>
+</form>
+
+

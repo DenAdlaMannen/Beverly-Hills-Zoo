@@ -48,6 +48,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Emanu/source/repos/Beverly-Hills-Zoo/Beverly-Hills-Zoo/BHZ/BHZ/Views/Visitor/AddVisitor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRvclxBZGRWaXNpdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Emanu/source/repos/Beverly-Hills-Zoo/Beverly-Hills-Zoo/BHZ/BHZ/Views/Visitor/UpdateVisitor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRvclxVcGRhdGVWaXNpdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Emanu/source/repos/Beverly-Hills-Zoo/Beverly-Hills-Zoo/BHZ/BHZ/Views/Visitor/VisitorView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRvclxWaXNpdG9yVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
