@@ -1,36 +1,84 @@
-﻿<h1>Book a visit for @Model.Name</h1>
+﻿<div class="d-flex align-items-center">
+    <h1>Book a visit for @Model.Name </h1>
+    <img src="@Url.Content("~/Images/booking.png")" class="img-fluid" alt="Stor bild" style="height: 100px">
+</div>
 
-<form asp-controller="Animal" asp-action="AddAnimalAction" method="post">
+<form asp-controller="Booking" asp-action="BookAVisitAction" method="post">
+
     <div class="form-group">
-        <label for="animalName">Select Specie</label>
-        <select class="form-control" id="animalName" name="specieName">
+        <p>The booking will be placed in @Model.Name's name</p>
+    </div>
 
-            @foreach (var animal in animalSpecies)
+    <input type="hidden" name="visitorID" id="visitorID" value="@Model.ID"/>
+
+    <div class="form-group">
+        <label for="selectAnimals">Select the animals you want to Visit</label>
+        <select multiple class="form-control" id="selectAnimals" name="selectedAnimalsId">     
+               @foreach (var animal in ViewBag.Animals)
             {
-                <option value="@animal">@animal</option>
-            }
+                <option value="@animal.ID">@animal.Name @animal.SpecieName</option>
+            }         
         </select>
     </div>
 
     <div class="form-group">
-        <label for="animalName">The animals name</label>
-        <input class="form-control" id="animalName" placeholder="Name" name="name">
+        <label for="selectTime">Select your desired time to make the visit</label>
+        <select class="form-control" id="selectTime" name="selectedTime">
+            <option value="Förmiddag 9-12">Förmiddag 9-12</option>
+            <option value="Eftermiddag 13-16">Eftermiddag 13-16</option>
+        </select>
     </div>
 
     <div class="form-group">
-        <label for="exampleFormControlTextarea1">This animals story</label>
-        <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Example: Rescued from Fredriks basement.."></textarea>
+        <label for="datetimeInput">Select Date and Time</label>
+        <input type="date" class="form-control" id="datetimeInput" name="selectedDate">
     </div>
 
     <div class="form-group">
-        <label for="animalAge">Age</label>
-        <input class="form-control" id="animalAge" placeholder="Age" name="age">
+        <label for="selectCompanyCount">Select how many you want to bring with you in your visit.</label>
+        <select class="form-control" id="selectCompanyCount" name="selectCompanyCount">
+            @for (int i = 0; i < 5; i++)
+            {
+                <option value="@i">@i</option>
+            }
+        </select>
     </div>
+
     <br />
-    <button type="submit" class="btn btn-success">Add animal</button>
+    <button type="submit" class="btn btn-success">Book</button>
 </form>
+
+@if (ViewBag.Bookings != null)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Visit schedueled</th>
+                <th scope="col">Date</th>
+                <th scope="col">@Model.Name's Total company</th>
+                <th scope ="col">Animals schedueled to visit</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var visit in ViewBag.Bookings)
+            {
+                <tr>
+                    <td>@visit.VisitTime</td>
+                    <td>@visit.DateToVisit</td>
+                    <td>@visit.CompanyCount</td>
+                    <td>
+                        @foreach (var animal in visit.SpeciesToVisit)
+                        {
+                            <p>@animal.Name</p>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
 
 @{
 
-    var animals = 
 }

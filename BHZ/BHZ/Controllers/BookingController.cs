@@ -1,4 +1,5 @@
 ﻿using BHZ.Data;
+using BHZ.Models.VisitVisitor;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,24 +19,38 @@ namespace BHZ.Controllers
 
             if(visitor != null)
             {
+                var animals = _context.Animals.ToList();
+                var bookings = _context.Visits.Include("Visitor").Where(x => x.Id == visitorId);
+
+                    ViewBag.Animals = animals;
+                    ViewBag.Bookings = bookings;
+
                 return View(visitor);
             }
-
-
             return RedirectToAction("VisitorView");
         }
-        public IActionResult DeleteAnimal(int animalID)
+        [HttpPost]
+        public IActionResult BookAVisitAction(int visitorID, int[] selectedAnimalsId, string selectedTime, DateTime selectedDate, int selectCompanyCount)
         {
+            var visitor = _context.Visitors.Find(visitorID);
 
-            var animal = _context.Animals.Find(animalID);
 
-            if (animal != null)
+
+            if (visitor != null)
             {
-                _context.Animals.Remove(animal);
-                _context.SaveChanges();
-            }
+                var animals = _context.Animals.Where(x => selectedAnimalsId.Contains(x.ID)).ToList();
+                Visit visit = new Visit();
+                visit.Visitor = visitor;
+                visit.VisitTime = selectedTime;
+                visit.DateToVisit = selectedDate;
+                visit.CompanyCount = selectCompanyCount;
+                visit.SpeciesToVisit = animals;
 
-            return RedirectToAction("AnimalView");
+                _context.Visits.Add(visit);
+                _context.SaveChanges();
+                return RedirectToAction("BookAVisit", new {visitorID = visitorID});
+            }
+            return RedirectToAction("VisitorView", "Visitor");
         }
     }
 }

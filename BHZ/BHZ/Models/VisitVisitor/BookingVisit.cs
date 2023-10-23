@@ -2,6 +2,6 @@
 {
     public class BookingVisit
     {
-        private List<Visit> bookedVisits = new List<Visit>();
+        public List<Visit> bookedVisits = new List<Visit>();
     }
 }

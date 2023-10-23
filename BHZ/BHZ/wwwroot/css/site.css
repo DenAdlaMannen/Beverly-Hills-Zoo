@@ -24,7 +24,7 @@ body {
     background-color: slategrey;
 }
 
-h1 {
+h1, h4 {
     color: wheat;
     font-family: 'Alumni Sans Collegiate One', sans-serif;
     font-family: 'Playpen Sans', cursive;

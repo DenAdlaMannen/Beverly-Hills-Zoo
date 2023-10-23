@@ -4,6 +4,7 @@ using BHZ.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BHZ.Migrations
 {
     [DbContext(typeof(BhzDbContext))]
-    partial class BhzDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231023133618_UpdateVisitModel")]
+    partial class UpdateVisitModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -77,7 +80,7 @@ namespace BHZ.Migrations
 
                     b.HasIndex("VisitId");
 
-                    b.ToTable("Animals", (string)null);
+                    b.ToTable("Animals");
 
                     b.HasDiscriminator<string>("AirAnimalSpecie").HasValue("Animal");
 
@@ -109,7 +112,7 @@ namespace BHZ.Migrations
 
                     b.HasIndex("VisitorID");
 
-                    b.ToTable("Visits", (string)null);
+                    b.ToTable("Visits");
                 });
 
             modelBuilder.Entity("BHZ.Models.VisitVisitor.Visitor", b =>
@@ -130,7 +133,7 @@ namespace BHZ.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Visitors", (string)null);
+                    b.ToTable("Visitors");
                 });
 
             modelBuilder.Entity("BHZ.Models.Habitats.Air", b =>
