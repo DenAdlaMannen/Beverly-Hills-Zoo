@@ -19,7 +19,7 @@
                 <td>@visitor.Email</td>
                 <td>
                     <form asp-controller="Booking" asp-action="BookAVisit" method="post">
-                        <input type="hidden" name="animalID" value="@visitor.ID" />
+                        <input type="hidden" name="visitorId" value="@visitor.ID" />
                         <button type="submit" class="btn btn-warning">Book a visit!</button>
                     </form>
                 </td>
