@@ -16,18 +16,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\joelb\Videos\Beverly-Hills-Zoo\BHZ\BHZ
 build_property._RazorSourceGeneratorDebug = 
 
+<<<<<<< Updated upstream
 [C:/Users/joelb/Videos/Beverly-Hills-Zoo/BHZ/BHZ/Views/Animal/AddAnimal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWFsXEFkZEFuaW1hbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+=======
+>>>>>>> Stashed changes
 [C:/Users/joelb/Videos/Beverly-Hills-Zoo/BHZ/BHZ/Views/Animal/AnimalView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWFsXEFuaW1hbFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< Updated upstream
 [C:/Users/joelb/Videos/Beverly-Hills-Zoo/BHZ/BHZ/Views/Animal/UpdateAnimal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWFsXFVwZGF0ZUFuaW1hbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+=======
+>>>>>>> Stashed changes
 [C:/Users/joelb/Videos/Beverly-Hills-Zoo/BHZ/BHZ/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,6 +50,7 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< Updated upstream
 [C:/Users/joelb/Videos/Beverly-Hills-Zoo/BHZ/BHZ/Views/Visitor/AddVisitor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRvclxBZGRWaXNpdG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -56,6 +63,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRvclxWaXNpdG9yVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+=======
+>>>>>>> Stashed changes
 [C:/Users/joelb/Videos/Beverly-Hills-Zoo/BHZ/BHZ/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
