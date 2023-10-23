@@ -34,8 +34,6 @@ namespace BHZ.Controllers
         {
             var visitor = _context.Visitors.Find(visitorID);
 
-
-
             if (visitor != null)
             {
                 var animals = _context.Animals.Where(x => selectedAnimalsId.Contains(x.ID)).ToList();
@@ -44,7 +42,7 @@ namespace BHZ.Controllers
                 visit.VisitTime = selectedTime;
                 visit.DateToVisit = selectedDate;
                 visit.CompanyCount = selectCompanyCount;
-                visit.SpeciesToVisit = animals;
+                visit.AnimalVisit = ;
 
                 _context.Visits.Add(visit);
                 _context.SaveChanges();

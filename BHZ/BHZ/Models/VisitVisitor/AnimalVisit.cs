@@ -2,8 +2,9 @@
 {
     public class AnimalVisit
     {
-        public Animal AnimalAnimals { get; set; }
-
-        public Visit Visits { get; set; }
+        public int AnimalId { get; set; }
+        public int VisitID { get; set; }
+        public Animal Animal { get; set; }
+        public Visit Visit { get; set; }
     }
 }
