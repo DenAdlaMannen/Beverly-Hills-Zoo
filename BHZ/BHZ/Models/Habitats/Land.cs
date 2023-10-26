@@ -4,5 +4,6 @@
     {
         public abstract int Speed { get; set; }
         public string? LandAnimalSpecie { get; set; }
+
     }
 }

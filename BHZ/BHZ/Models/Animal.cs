@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using BHZ.Models.VisitVisitor;
+using System.ComponentModel.DataAnnotations;
 
 namespace BHZ.Models
 {
@@ -14,5 +15,8 @@ namespace BHZ.Models
         public int SpecieWeightMax { get; set; }
         public bool Endangered { get; set; }
         public string? HabitatType { get; set; }
+        public List<Visit>visits { get; set; }
+
+        public abstract string move();
     }
 }

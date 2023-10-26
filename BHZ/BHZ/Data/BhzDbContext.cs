@@ -42,7 +42,10 @@ namespace BHZ.Data
                 .HasValue<Gargoyle>("Gargoyle")
                 .HasValue<Penguin>("Penguin");
 
-
+            modelBuilder.Entity<Visit>()
+                .HasMany(x => x.Animals)
+                .WithMany(y => y.visits)
+                .UsingEntity(j => j.ToTable("AnimalVisit"));
 
 
             //base.OnModelCreating(modelBuilder);

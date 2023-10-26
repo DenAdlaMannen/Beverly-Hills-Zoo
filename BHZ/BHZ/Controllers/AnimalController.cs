@@ -14,6 +14,11 @@ namespace BHZ.Controllers
         {
             _context = context;
         }
+        public List<Animal> GetAllAnimals()
+        {
+            var animals = _context.Animals.ToList();
+            return animals;
+        }
         public IActionResult AnimalView()
         {
             var animals = _context.Animals.ToList();
@@ -41,6 +46,8 @@ namespace BHZ.Controllers
                             Name = name,
                             Description = description,
                             Age = age,
+                            AirAnimalSpecie = specieName,
+                            MaxAltitude = 25
                         };
 
                         // Lägg till den nya instansen i din DbContext
@@ -58,6 +65,8 @@ namespace BHZ.Controllers
                             Name = name,
                             Description = description,
                             Age = age,
+                            AirAnimalSpecie = specieName,
+                            MaxAltitude = 304
                         };
 
                         // Lägg till den nya instansen i din DbContext
@@ -75,6 +84,8 @@ namespace BHZ.Controllers
                             Name = name,
                             Description = description,
                             Age = age,
+                            AirAnimalSpecie = specieName,
+                            MaxAltitude = 55
                         };
 
                         // Lägg till den nya instansen i din DbContext
@@ -92,6 +103,8 @@ namespace BHZ.Controllers
                             Name = name,
                             Description = description,
                             Age = age,
+                            LandAnimalSpecie = specieName,
+                            Speed = 294
                         };
 
                         // Lägg till den nya instansen i din DbContext
@@ -109,6 +122,8 @@ namespace BHZ.Controllers
                             Name = name,
                             Description = description,
                             Age = age,
+                            LandAnimalSpecie = specieName,
+                            Speed = 2
                         };
 
                         // Lägg till den nya instansen i din DbContext
@@ -126,6 +141,8 @@ namespace BHZ.Controllers
                             Name = name,
                             Description = description,
                             Age = age,
+                            LandAnimalSpecie = specieName,
+                            Speed = 53
                         };
 
                         // Lägg till den nya instansen i din DbContext
@@ -143,6 +160,8 @@ namespace BHZ.Controllers
                             Name = name,
                             Description = description,
                             Age = age,
+                            SeaAnimalSpecie = specieName,
+                            DivingDepth = 2
                         };
 
                         // Lägg till den nya instansen i din DbContext
@@ -160,6 +179,8 @@ namespace BHZ.Controllers
                             Name = name,
                             Description = description,
                             Age = age,
+                            SeaAnimalSpecie = specieName,
+                            DivingDepth = 394392,
                         };
 
                         // Lägg till den nya instansen i din DbContext
@@ -177,6 +198,8 @@ namespace BHZ.Controllers
                             Name = name,
                             Description = description,
                             Age = age,
+                            SeaAnimalSpecie = specieName,
+                            DivingDepth = 220
                         };
 
                         // Lägg till den nya instansen i din DbContext

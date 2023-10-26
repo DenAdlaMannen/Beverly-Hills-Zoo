@@ -1,0 +1,44 @@
+﻿<h1>Book Animal</h1>
+
+<form asp-controller="Booking" asp-action="BookAnimalAction" method="post">
+
+    <div class="form-group">
+        <p>The booking will be placed in @Model.Name's name</p>
+        <p>Time: @ViewBag.SelectedTime </p>
+        <p>Date: @ViewBag.SelectedDate </p>
+    </div>
+
+    
+    <input type="hidden" name="visitorID" id="visitorID" value="@Model.ID" />
+    <input type="hidden" name="selectedTime" id="selectedTime" value="@ViewBag.SelectedTime" />
+    <input type="hidden" name="selectedDate" id="selectedDate" value="@ViewBag.SelectedDate" />
+
+    <div class="form-group">
+        <label for="selectAnimals">Select the animals you want to Visit</label>
+        <select multiple class="form-control" id="selectAnimals" name="selectedAnimalSpecie">
+            @foreach (var animal in ViewBag.AvailableAnimals)
+            {
+                if (animal != null)
+                {
+                    <option value="@animal.SpecieName">@animal.SpecieName</option>
+                }
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="selectCompanyCount">Select how many you want to bring with you in your visit.</label>
+        <select class="form-control" id="selectCompanyCount" name="selectCompanyCount">
+            @for (int i = 0; i < 5; i++)
+            {
+                <option value="@i">@i</option>
+            }
+        </select>
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-success">Book</button>
+</form>
+
+@{
+}

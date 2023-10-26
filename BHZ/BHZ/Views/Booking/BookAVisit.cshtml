@@ -3,23 +3,13 @@
     <img src="@Url.Content("~/Images/booking.png")" class="img-fluid" alt="Stor bild" style="height: 100px">
 </div>
 
-<form asp-controller="Booking" asp-action="BookAVisitAction" method="post">
+<form asp-controller="Booking" asp-action="BookAnimal" method="post">
 
     <div class="form-group">
         <p>The booking will be placed in @Model.Name's name</p>
     </div>
 
     <input type="hidden" name="visitorID" id="visitorID" value="@Model.ID"/>
-
-    <div class="form-group">
-        <label for="selectAnimals">Select the animals you want to Visit</label>
-        <select multiple class="form-control" id="selectAnimals" name="selectedAnimalsId">     
-               @foreach (var animal in ViewBag.Animals)
-            {
-                <option value="@animal.ID">@animal.Name @animal.SpecieName</option>
-            }         
-        </select>
-    </div>
 
     <div class="form-group">
         <label for="selectTime">Select your desired time to make the visit</label>
@@ -34,20 +24,12 @@
         <input type="date" class="form-control" id="datetimeInput" name="selectedDate">
     </div>
 
-    <div class="form-group">
-        <label for="selectCompanyCount">Select how many you want to bring with you in your visit.</label>
-        <select class="form-control" id="selectCompanyCount" name="selectCompanyCount">
-            @for (int i = 0; i < 5; i++)
-            {
-                <option value="@i">@i</option>
-            }
-        </select>
-    </div>
-
     <br />
     <button type="submit" class="btn btn-success">Book</button>
 </form>
+<br />
 
+<h4>@Model.Name's current bookings</h4>
 @if (ViewBag.Bookings != null)
 {
     <table class="table table-striped">
@@ -67,10 +49,22 @@
                     <td>@visit.DateToVisit</td>
                     <td>@visit.CompanyCount</td>
                     <td>
-                        @foreach (var animal in visit.SpeciesToVisit)
+                        @foreach (var animal in visit.Animals)
                         {
-                            <p>@animal.Name</p>
+                            <p>@animal.SpecieName</p>
                         }
+                    </td>
+                    <td>
+                        <form asp-controller="Booking" asp-action="DeleteBooking" method="post">
+                            <input type="hidden" name="visitID" value="@visit.Id" />
+                            <button type="submit" class="btn btn-danger">Delete Booking</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form asp-controller="Booking" asp-action="UpdateBooking" method="post">
+                            <input type="hidden" name="visitID" value="@visit.Id" />
+                            <button type="submit" class="btn btn-danger">Update Booking</button>
+                        </form>
                     </td>
                 </tr>
             }
