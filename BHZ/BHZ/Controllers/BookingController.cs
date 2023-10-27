@@ -19,7 +19,7 @@ namespace BHZ.Controllers
         {
             var visitor = _context.Visitors.Find(visitorId);
 
-            if(visitor != null)
+            if (visitor != null)
             {
                 //Only display animals that is not occupied this 
 
@@ -27,7 +27,7 @@ namespace BHZ.Controllers
                 var bookings = _context.Visits.Include("Animals").Where(x => x.Visitor.ID == visitorId).ToList();
 
                 ViewBag.Animals = animals;
-                    ViewBag.Bookings = bookings;
+                ViewBag.Bookings = bookings;
 
                 return View(visitor);
             }
@@ -39,7 +39,7 @@ namespace BHZ.Controllers
             var visitor = _context.Visitors.Find(visitorID);
 
             //Check if visitor already has a booking this time
-            
+
 
             if (visitor != null)
             {
@@ -49,11 +49,11 @@ namespace BHZ.Controllers
                 visit.VisitTime = selectedTime;
                 visit.DateToVisit = selectedDate;
                 visit.CompanyCount = selectCompanyCount;
-                visit.Animals = animals; 
+                visit.Animals = animals;
 
                 _context.Visits.Add(visit);
                 _context.SaveChanges();
-                return RedirectToAction("BookAVisit", new {visitorID = visitorID});
+                return RedirectToAction("BookAVisit", new { visitorID = visitorID });
             }
             return RedirectToAction("VisitorView", "Visitor");
         }
@@ -66,7 +66,7 @@ namespace BHZ.Controllers
 
             if (visitor != null)
             {
-                List<Animal> animals = new List<Animal> {};
+                List<Animal> animals = new List<Animal> { };
                 //var animals = _context.Animals.Where(x => selectedAnimalSpecie.Contains(x.ID)).ToList();
                 foreach (var animal in selectedAnimalSpecie)
                 {
@@ -92,7 +92,7 @@ namespace BHZ.Controllers
         [HttpPost]
         public IActionResult BookAnimal(int visitorID, string selectedTime, DateTime selectedDate)
         {
-            List<string> animalSpecies = new List<string> { "Penguin" , "Gargoyle", "Dragon", "Ant", "Hedgehog", "Snake", "Crab", "Cucumber", "Plankton" };
+            List<string> animalSpecies = new List<string> { "Penguin", "Gargoyle", "Dragon", "Ant", "Hedgehog", "Snake", "Crab", "Cucumber", "Plankton" };
             List<Animal> availableAnimals = new List<Animal>();
             var visitor = _context.Visitors.Find(visitorID);
 
@@ -134,7 +134,7 @@ namespace BHZ.Controllers
 
                     if (individualAnimalCount < 1)
                     {
-                       var addAnimal = _context.Animals.FirstOrDefault(x => x.SpecieName == animal);
+                        var addAnimal = _context.Animals.FirstOrDefault(x => x.SpecieName == animal);
                         availableAnimals.Add(addAnimal);
                     }
                 }
@@ -170,12 +170,77 @@ namespace BHZ.Controllers
                 _context.SaveChanges();
             }
 
-            return RedirectToAction("BookAVisit", new {visitorId = visitorID});
+            return RedirectToAction("BookAVisit", new { visitorId = visitorID });
         }
         public IActionResult UpdateBooking(int visitId)
         {
             var booking = _context.Visits.Include("Visitor").FirstOrDefault(x => x.Id == visitId);
+            //ViewBag.Visitor = booking.Visitor;
             return View(booking);
+        }
+        public IActionResult UpdateBookedAnimal(int visitId, string selectedTime, DateTime selectedDate)
+        {
+            var booking = _context.Visits.Include("Visitor").FirstOrDefault(x => x.Id == visitId);
+            ViewBag.AvailableAnimals = GetAvailableAnimals(selectedTime, selectedDate);
+            ViewBag.SelectedTime = selectedTime;
+            ViewBag.SelectedDate = selectedDate;
+
+            return View(booking);
+        }
+        [HttpPost]
+        public IActionResult UpdateBookedAnimalAction(int visitId, string selectedTime, DateTime selectedDate, string[] selectedAnimalSpecie, int selectCompanyCount)
+        {
+            //Gets all the animals from the database that has that specie name and puts them in the a list.
+            List<Animal> animalsToAddToVisit = FindAllAnimalsFromDbByNames(selectedAnimalSpecie);
+            var booking = _context.Visits.Include("Animals").Include("Visitor").FirstOrDefault(x => x.Id == visitId);
+
+            if(booking != null)
+            {
+                booking.Animals = animalsToAddToVisit;
+                booking.VisitTime = selectedTime;
+                booking.DateToVisit = selectedDate;
+                booking.CompanyCount = selectCompanyCount;
+
+                _context.SaveChanges();
+            }
+
+
+            return RedirectToAction("BookAVisit", new {visitorId = booking.Visitor.ID });
+        }
+        public List<Animal> GetAvailableAnimals(string selectedTime, DateTime selectedDate)
+        {
+            List<string> animalSpecies = new List<string> { "Penguin", "Gargoyle", "Dragon", "Ant", "Hedgehog", "Snake", "Crab", "Cucumber", "Plankton" };
+            List<Animal> availableAnimals = new List<Animal>();
+
+            foreach (var animal in animalSpecies)
+            {
+                //Does the animal specie exist more than 2 times this day, gets the count
+                var animalCount2 = _context.Visits.Include("Animals").Where(x => x.DateToVisit == selectedDate).Where(x => x.Animals.Any(a => a.SpecieName == animal)).Count();
+
+                var individualAnimalCount = _context.Visits.Include("Animals").Where(x => x.DateToVisit == selectedDate).Where(t => t.VisitTime == selectedTime).Where(x => x.Animals.Any(a => a.SpecieName == animal)).Count();
+
+                if (individualAnimalCount < 1)
+                {
+                    var addAnimal = _context.Animals.FirstOrDefault(x => x.SpecieName == animal);
+                    availableAnimals.Add(addAnimal);
+                }
+            }
+
+            return availableAnimals;
+        }
+        public List<Animal> FindAllAnimalsFromDbByNames(string[] selectedAnimalSpecies)
+        {
+            List<Animal> animals = new List<Animal> { };
+            //var animals = _context.Animals.Where(x => selectedAnimalSpecie.Contains(x.ID)).ToList();
+            foreach (var animal in selectedAnimalSpecies)
+            {
+                var animalsSelect = _context.Animals.Where(x => x.SpecieName == animal).ToList();
+                foreach (var individualAnimal in animalsSelect)
+                {
+                    animals.Add(individualAnimal);
+                }
+            }
+            return animals;
         }
     }
 }
