@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\BHZ.csproj": {}
+    "C:\\Users\\joelb\\Music\\Beverly-Hills-Zoo\\BHZ\\BHZ\\BHZ.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\BHZ.csproj": {
+    "C:\\Users\\joelb\\Music\\Beverly-Hills-Zoo\\BHZ\\BHZ\\BHZ.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\BHZ.csproj",
+        "projectUniqueName": "C:\\Users\\joelb\\Music\\Beverly-Hills-Zoo\\BHZ\\BHZ\\BHZ.csproj",
         "projectName": "BHZ",
-        "projectPath": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\BHZ.csproj",
-        "packagesPath": "C:\\Users\\Emanu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Emanu\\source\\repos\\Beverly-Hills-Zoo\\Beverly-Hills-Zoo\\BHZ\\BHZ\\obj\\",
+        "projectPath": "C:\\Users\\joelb\\Music\\Beverly-Hills-Zoo\\BHZ\\BHZ\\BHZ.csproj",
+        "packagesPath": "C:\\Users\\joelb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joelb\\Music\\Beverly-Hills-Zoo\\BHZ\\BHZ\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Emanu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joelb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -27,7 +27,6 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -86,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

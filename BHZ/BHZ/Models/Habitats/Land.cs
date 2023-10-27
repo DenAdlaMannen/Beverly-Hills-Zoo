@@ -1,4 +1,4 @@
-﻿namespace BHZ.Models.Habitats
+﻿    namespace BHZ.Models.Habitats
 {
     public abstract class Land : Animal
     {
