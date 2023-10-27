@@ -1,15 +1,15 @@
-﻿<h1>Book Animal</h1>
+﻿
+<h1>Update your booking for @Model.Visitor.Name</h1>
 
-<form asp-controller="Booking" asp-action="BookAnimalAction" method="post">
-
+<form asp-controller="Booking" asp-action="UpdateBookedAnimalAction" method="post">
     <div class="form-group">
-        <p>The booking will be placed in @Model.Name's name</p>
+        <p>The booking will be placed in @Model.Visitor.Name's name</p>
         <p>Time: @ViewBag.SelectedTime </p>
         <p>Date: @ViewBag.SelectedDate </p>
     </div>
 
-    
-    <input type="hidden" name="visitorID" id="visitorID" value="@Model.ID" />
+
+    <input type="hidden" name="visitId" id="visitId" value="@Model.Id" />
     <input type="hidden" name="selectedTime" id="selectedTime" value="@ViewBag.SelectedTime" />
     <input type="hidden" name="selectedDate" id="selectedDate" value="@ViewBag.SelectedDate" />
 

@@ -1,3 +1,32 @@
-﻿<h1>Update your booking for @Model.Name</h1>
-@{
+﻿@{
+    List<string> animalSpecies = new List<string> { "Penguin", "Gargoyle", "Dragon", "Ant", "Hedgehog", "Snake", "Crab", "Cucumber", "Plankton" };
 }
+
+<h1>Update your booking for @Model.Visitor.Name</h1>
+
+<form asp-controller="Booking" asp-action="UpdateBookedAnimal" method="post">
+
+    <div class="form-group">
+        <p>The booking will be placed in @Model.Visitor.Name's name</p>
+    </div>
+
+    <input type="hidden" name="visitId" id="visitId" value="@Model.Id" />
+
+    <div class="form-group">
+        <label for="selectTime">Select your desired time to make the visit</label>
+        <select class="form-control" id="selectTime" name="selectedTime">
+            <option value="Förmiddag 9-12">Förmiddag 9-12</option>
+            <option value="Eftermiddag 13-16">Eftermiddag 13-16</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="datetimeInput">Select Date and Time</label>
+        <input type="date" class="form-control" id="datetimeInput" name="selectedDate">
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-success">Continue booking</button>
+</form>
+
+
